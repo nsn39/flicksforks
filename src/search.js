@@ -16,6 +16,7 @@ function Search(props) {
     const searchText = props.match.params.name;
 
     const fetchOMDbAPI = async () => {
+        console.log(searchText);
         const API_KEY = "d4455ef8";
 
         const reqURL = `https://omdbapi.com/?apikey=${API_KEY}&t=${searchText}`;
@@ -23,11 +24,35 @@ function Search(props) {
         const response = await axios(reqURL);
 
         console.log('Response body: ' , response.data);
+
+    };
+
+    const fetchNewsAPI = async () => {
+        console.log(searchText);
+        const API_KEY = "c513f006b5b14498a96033f41cc2b056";
+
+        const reqURL = `https://newsapi.org/v2/everything?q=${searchText} movie&apiKey=${API_KEY}`;
+
+        const response = await axios(reqURL);
+
+        console.log('Response body: ' , response.data);
+    };
+
+    const fetchReviewsAPI = async () => {
+        const API_KEY = "oFW5YXqNWR3za073yHRN3CI4zi6iAN5o";
+        console.log('Search text is: ', searchText);
+        const reqURL = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${searchText.substr(1)}&api-key=${API_KEY}`;
+        //const reqURL =  "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + searchText.substr(1) +"&api-key=" + API_KEY;
+        const response = await axios (reqURL);
+
+        console.log('Response body:', response.data.results);
     };
 
     useEffect(() => {
         console.log(input);
         fetchOMDbAPI();
+        fetchNewsAPI();
+        fetchReviewsAPI();
     }, [input]);
 
     return (
