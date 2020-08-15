@@ -1,0 +1,44 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    overflow: auto;
+}
+
+.home__search {
+    display: flex;
+    height: 30vh;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.home__search__textfield {
+    width: 35vw;
+    margin-right: 15px !important;
+}
+
+.home__search__button {
+    height: 8vh !important;
+    display: flex;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    background-color: rgba(255, 99, 71, 0.534) !important;
+}
+
+.icon {
+    font-size: 30px !important;
+}
+
+.home__trending , .home__news{
+    height: 40vh;
+    padding-left: 30px;
+}
+
+.home__trending__header, .home__news__header {
+    font-size: 25px;
+}
+
+.home__trending__list, .home__news__list {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,22 @@
+.search {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__search {
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-self: center;
+}
+
+.search__results {
+    padding-left: 25px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+
