@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Poster(props) {
     const jsonData = props.jsonData;
+    const title = jsonData.Title;
+    const detailsPageURL = `/movies/:${title}`;
     
     useEffect(() => {
 
@@ -12,7 +14,7 @@ function Poster(props) {
     return (
         <div className="poster">
             <div className="poster__img">
-                <Link to="/">
+                <Link to={detailsPageURL}>
                     <img src={jsonData.Poster} />
                 </Link>     
             </div>

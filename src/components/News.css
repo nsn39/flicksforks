@@ -1,5 +1,5 @@
 .news {
-    height: 30vh;
+    height: 32vh;
     width: 36vh;
     border: 2px black solid;
     margin-right: 10px;
@@ -15,8 +15,12 @@
 }
 
 .news__details {
-    height: 10.3vh;
+    height: 12.3vh;
     background-color: rgb(228, 224, 224);
+}
+
+.news__details p {
+    font-size: 12px;
 }
 
 .news__details h2 {

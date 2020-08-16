@@ -7,6 +7,7 @@ import './search.css';
 import axios from 'axios';
 import Poster from './components/Poster';
 import News from './components/News';
+import Review from './components/Review';
 
 function Search(props) {
 
@@ -103,6 +104,8 @@ function Search(props) {
                 </div>
                 
                 <div className="search__results">
+                    <h4>Showing results for {props.match.params.name}</h4>
+
                     <div className="search__movie">
                         <h3 className="title">Movies</h3>
                         <Poster jsonData={jsonMovieData}/>
@@ -121,16 +124,12 @@ function Search(props) {
                         <h3 className="title">Reviews</h3>
                         <div className="search__reviews__content">
                             {jsonMovieReviews.map((review) => (
-                                <News jsonData={review}/>
+                                <Review jsonData={review}/>
                             ))}
                         </div>
                     </div>
                 </div>
                 
-
-                <h4>You searched for {props.match.params.name}</h4>
-
-
             </div>
         </div>
     )

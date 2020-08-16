@@ -2,7 +2,7 @@
     width: 55vw;
     display: flex;
     flex-direction: column;
-    
+    margin-left: -3vw;
 }
 
 .home__search {
@@ -25,7 +25,8 @@
 }
 
 .search__news {
-    height: 40vh;
+    height: 42vh;
+    width: 48vw;
 }
 
 .search__news__content {
@@ -35,4 +36,10 @@
 
 .search__reviews {
     height: 40vh;
+    width: 48vw;
+}
+
+.search__reviews__content {
+    display: flex;
+    overflow: auto;
 }

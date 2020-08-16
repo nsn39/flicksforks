@@ -18,7 +18,6 @@ function App() {
         <Header />
         <div className="main__content">
           <Sidebar />
-
           <Route path="/" exact component={Home} />
           <Route path="/myforks" exact component={myforks} />
           <Route path="/movies/:name" exact component={Movie} />
