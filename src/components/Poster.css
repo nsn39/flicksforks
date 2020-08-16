@@ -1,0 +1,12 @@
+.poster{
+    height: 25vh;
+    width: 17vh;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+}
+
+.poster__img img {
+    height: 24.9vh;
+    width: 17vh;
+    border-radius: 5px;
+}

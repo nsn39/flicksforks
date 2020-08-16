@@ -2,6 +2,7 @@
     width: 55vw;
     display: flex;
     flex-direction: column;
+    
 }
 
 .home__search {
@@ -12,11 +13,26 @@
 }
 
 .search__results {
-    padding-left: 25px;
+    padding-left: 35px;
 }
 
 .title {
     font-size: 25px;
 }
 
+.search__movie {
+    height: 35vh;
+}
 
+.search__news {
+    height: 40vh;
+}
+
+.search__news__content {
+    display: flex;
+    overflow: auto;
+}
+
+.search__reviews {
+    height: 35vh;
+}
