@@ -16,7 +16,7 @@ function Search(props) {
 
     const [jsonMovieData, setMovieData] = useState({});
 
-    const [jsonMovieReviews, setMovieReviews] = useState({});
+    const [jsonMovieReviews, setMovieReviews] = useState([]);
 
     const [jsonMovieNews, setMovieNews] = useState([]);
     
@@ -65,8 +65,8 @@ function Search(props) {
         const reqURL = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${searchText.substr(1)}&api-key=${API_KEY}`;
         const response = await axios (reqURL);
 
-        console.log('Response body:', response.data.results);
-        setMovieReviews(response.data);
+        console.log('Response body review:', response.data.results);
+        setMovieReviews(response.data.results);
     };
 
     useEffect(() => {
@@ -119,6 +119,11 @@ function Search(props) {
 
                     <div className="search__reviews">
                         <h3 className="title">Reviews</h3>
+                        <div className="search__reviews__content">
+                            {jsonMovieReviews.map((review) => (
+                                <News jsonData={review}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 
