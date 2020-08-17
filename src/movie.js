@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
-
+import './movie.css'
 
 function Movie(props) {
     const searchName = props.match.params.name.substr(1);
@@ -47,7 +47,7 @@ function Movie(props) {
                         <li>Year: {movieJSONData.Year}</li>
                         <li>Runtime: {movieJSONData.Runtime}</li>
                     </ul>
-                    <Button variant="contained" color="secondary">FORK IT!</Button>
+                    <Button className="forkButton" variant="contained" color="secondary">FORK IT!</Button>
                 </div>
             </div>
 
@@ -57,26 +57,38 @@ function Movie(props) {
             </div>
 
             <div className="movies__extra__info">
-                <h5>Ratings:</h5>
-                <ul>
-                    <h5>IMDb Rating: {movieJSONData.imdbRating}</h5>
-                    <h5>Total Votes: {movieJSONData.imdbVotes}</h5>
-                </ul>
+                <div className="movies__extra__info__numbers">
+                    <div>
+                        <h5>Ratings:</h5>
+                        <ul>
+                            <h5>IMDb Rating: {movieJSONData.imdbRating}</h5>
+                            <h5>Total Votes: {movieJSONData.imdbVotes}</h5>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4>Boxoffice Collection:</h4>
+                        <h6>{movieJSONData.BoxOffice}</h6>
+                    </div>
+                    
+                </div>
 
-                <h4>Actors:</h4>
-                <h5>{movieJSONData.Actors}</h5>
+                <div className="movies__extra__info__rem">
+                    <h4>Actors:</h4>
+                    <h5>{movieJSONData.Actors}</h5>
 
-                <h4>Awards:</h4>
-                <h5>{movieJSONData.Awards}</h5>
+                    <h4>Awards:</h4>
+                    <h5>{movieJSONData.Awards}</h5>
 
-                <h4>Produced by:</h4>
-                <h6>{movieJSONData.Production}</h6>
+                    <h4>Produced by:</h4>
+                    <h6>{movieJSONData.Production}</h6>
 
-                <h4>Languges Available:</h4>
+                    <h4>Languges Available:</h4>
                 <h6>{movieJSONData.Language}</h6>
+                </div>
+                
 
-                <h4>Boxoffice Collection:</h4>
-                <h6>{movieJSONData.BoxOffice}</h6>
+                
             </div>
         </div>
     )
