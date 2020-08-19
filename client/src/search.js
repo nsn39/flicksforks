@@ -32,15 +32,15 @@ function Search(props) {
 
         const response = await axios(reqURL);
 
-        console.log('Response body: ' , response.data);
-        console.log('We are assigning the value');
+        // console.log('Response body: ' , response.data);
+        // console.log('We are assigning the value');
         setMovieData(response.data);
-        console.log('Poster assigned again: ', jsonMovieData);
+        // console.log('Poster assigned again: ', jsonMovieData);
     };
 
     // Fetching data from the NewsAPI.org
     const fetchNewsAPI = async () => {
-        console.log(searchText);
+        // console.log(searchText);
         const API_KEY = "c513f006b5b14498a96033f41cc2b056";
 
         const reqURL = `https://newsapi.org/v2/everything?q=${searchText} movie&apiKey=${API_KEY}`;
@@ -56,27 +56,27 @@ function Search(props) {
             setMovieNews(response.data.articles);
         }
 
-        console.log('Response body articles: ' , jsonMovieNews);
+        // console.log('Response body articles: ' , jsonMovieNews);
     };
 
     // Fetching data from the NYTime Movie Review API
     const fetchReviewsAPI = async () => {
         const API_KEY = "oFW5YXqNWR3za073yHRN3CI4zi6iAN5o";
-        console.log('Search text is: ', searchText);
+        // console.log('Search text is: ', searchText);
         const reqURL = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${searchText.substr(1)}&api-key=${API_KEY}`;
         const response = await axios (reqURL);
 
-        console.log('Response body review:', response.data.results);
+        // console.log('Response body review:', response.data.results);
         setMovieReviews(response.data.results);
     };
 
     useEffect(() => {
         
-        console.log("Use effect is running again!!!");
+        // console.log("Use effect is running again!!!");
         fetchOMDbAPI();
         fetchNewsAPI();
         fetchReviewsAPI();
-        console.log('New jsonMovieData', jsonMovieData);
+        // console.log('New jsonMovieData', jsonMovieData);
     }, [ input]);
 
     return (

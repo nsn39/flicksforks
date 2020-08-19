@@ -26,7 +26,6 @@ function App() {
           <Route path="/watched" exact component={watched} />
           <Route path="/search/:name" exact component={Search} />
         </div>
-        
       </div>
     </Router>
   );

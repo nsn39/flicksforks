@@ -7,7 +7,7 @@ function Review(props) {
 
     const imageURL = (jsonData.multimedia != null) ? jsonData.multimedia.src : './../../public/review.jpg';
     useEffect(() => {
-        console.log('Review data received', jsonData);
+        // console.log('Review data received', jsonData);
     });
 
     return (

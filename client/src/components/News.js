@@ -7,7 +7,7 @@ function News(props) {
     const jsonData = props.jsonData;
 
     useEffect(() => {
-        console.log('News data received', jsonData);
+        // console.log('News data received', jsonData);
     });
     
     return (

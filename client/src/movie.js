@@ -17,10 +17,26 @@ function Movie(props) {
 
         const response = await axios(reqURL);
 
-        console.log('Response body: ' , response.data);
-        console.log('We are assigning the value');
+        // console.log('Response body: ' , response.data);
+        // console.log('We are assigning the value');
         setMovieData(response.data);
-        console.log('Poster assigned again: ', movieJSONData);
+        // console.log('Poster assigned again: ', movieJSONData);
+    };
+
+    // Saving the JSON Data to our Database.
+    const forkMovie = async () => {
+        console.log("Movie Forked");
+
+        const response = await fetch('/api/movie', {
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(movieJSONData)
+        })
+
+        console.log(response);
     };
 
     useEffect(() => {
@@ -47,7 +63,7 @@ function Movie(props) {
                         <li>Year: {movieJSONData.Year}</li>
                         <li>Runtime: {movieJSONData.Runtime}</li>
                     </ul>
-                    <Button className="forkButton" variant="contained" color="secondary">FORK IT!</Button>
+                    <Button className="forkButton" onClick={forkMovie} variant="contained" color="secondary">FORK IT!</Button>
                 </div>
             </div>
 
@@ -86,9 +102,6 @@ function Movie(props) {
                     <h4>Languges Available:</h4>
                 <h6>{movieJSONData.Language}</h6>
                 </div>
-                
-
-                
             </div>
         </div>
     )

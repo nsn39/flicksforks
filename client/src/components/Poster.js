@@ -9,7 +9,7 @@ function Poster(props) {
     
     useEffect(() => {
 
-        console.log("Poster received", jsonData);
+        // console.log("Poster received", jsonData);
     });
     return (
         <div className="poster">
