@@ -1,0 +1,20 @@
+.myforks {
+    background-color: indigo;
+    width: 100%;
+    overflow: auto;
+}
+
+.myforks__header {
+    font-size: 28px;
+    padding-left: 25px;
+}
+
+.myforks__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-item {
+    display: inline-grid;
+}
