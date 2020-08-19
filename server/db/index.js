@@ -6,5 +6,6 @@ mongoose.connect('mongodb+srv://dmwnishan:tendamagic@cluster0-zimwi.mongodb.net/
         console.log('Error received: ', e);
     })
 
+mongoose.pluralize(null);
 const db = mongoose.connection;
 module.exports = db;

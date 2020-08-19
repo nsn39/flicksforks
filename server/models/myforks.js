@@ -48,4 +48,10 @@ const MyFork = new Schema({
     Response:{type:String, required:true}
 })
 
-module.exports = mongoose.model('myforks', MyFork);
+// module.exports = mongoose.model('myforks', MyFork);
+
+module.exports = {
+    "MovieModel" : mongoose.model('myforks', MyFork),
+    "WatchedModel": mongoose.model('watched', MyFork),
+    "FavoritesModel": mongoose.model('favorites', MyFork),
+};

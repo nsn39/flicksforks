@@ -6,7 +6,6 @@ import MyforkPiece from './components/MyforkPiece';
 function Myforks() {
     const [moviesJSON, setJSON] = useState([]);
 
-
     const getMyForks = async () => {
         const responseJSON = await axios('/api/movies');
 

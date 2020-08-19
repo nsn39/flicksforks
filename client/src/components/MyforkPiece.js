@@ -3,6 +3,7 @@ import Poster from './Poster';
 import './MyforkPiece.css';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import axios from 'axios';
 
 function MyforkPiece(props) {
@@ -23,11 +24,38 @@ function MyforkPiece(props) {
         props.refreshHandler(newMyForksData.data.data);
     }
 
+    const moveToWatch = async () => {
+        await fetch(`/api/movie/${jsonData._id}`, {
+            method:'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        });
+
+        const response = await fetch('/api/watched', {
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        });
+
+        console.log(response);
+        
+        const newMyForksData = await axios('/api/movies');
+        props.refreshHandler(newMyForksData.data.data);
+    };  
+
     return (
         <div className="myforkpiece">
             <Poster jsonData={jsonData} />
-
-            <Button onClick={deleteFromDB} variant="contained" color="secondary"><Link to="/myforks">UNFORK</Link></Button>
+            <div className="myforkpiece__option">
+                <Button onClick={deleteFromDB} variant="contained" color="secondary"><Link to="/myforks">UNFORK</Link></Button>
+                <Button onClick={moveToWatch} varaint="contained" color="secondary"><CheckCircleIcon></CheckCircleIcon></Button>
+            </div>
         </div>
     )
 }
