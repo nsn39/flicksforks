@@ -1,0 +1,16 @@
+.watched {
+    background-color: indigo;
+    width: 100%;
+    overflow: auto;
+}
+
+.watched__header {
+    font-size: 28px;
+    padding-left: 25px;
+}
+
+.watched__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}

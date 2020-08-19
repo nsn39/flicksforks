@@ -8,7 +8,6 @@ import LocalMoviesIcon from '@material-ui/icons/LocalMovies';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SettingsIcon from '@material-ui/icons/Settings'
 
-
 function Sidebar() {
     return (
         <div className="sidebar">

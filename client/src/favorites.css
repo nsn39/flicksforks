@@ -1,0 +1,16 @@
+.favorites {
+    background-color: indigo;
+    width: 100%;
+    overflow: auto;
+}
+
+.favorites__header {
+    font-size: 28px;
+    padding-left: 25px;
+}
+
+.favorites__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
