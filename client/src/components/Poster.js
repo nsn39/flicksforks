@@ -8,7 +8,6 @@ function Poster(props) {
     const detailsPageURL = `/movies/:${title}`;
     
     useEffect(() => {
-
         // console.log("Poster received", jsonData);
     });
     return (
