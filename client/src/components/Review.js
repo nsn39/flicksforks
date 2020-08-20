@@ -14,7 +14,7 @@ function Review(props) {
         <div className="news">
             <img src={imageURL}></img>
             <div className="news__details">
-                <Link to={jsonData.link.url}>
+                <Link className="text-link" to={jsonData.link.url}>
                     <h2>{jsonData.display_title}</h2>
                 </Link>
                 <p>{jsonData.byline}</p>

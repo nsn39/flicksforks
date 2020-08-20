@@ -103,7 +103,7 @@ function Search(props) {
             </div>
             
             <div className="search__results">
-                <h4>Showing results for {props.match.params.name}</h4>
+                <h4>Showing results for {props.match.params.name.substr(1)}</h4>
 
                 <div className="search__movie">
                     <h3 className="title">Movies</h3>

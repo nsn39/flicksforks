@@ -27,17 +27,26 @@
     padding-left: 35px;
 }
 
+.search__results h4 {
+    font-size: 20px;
+}
+
 .title {
     font-size: 25px;
+    
 }
 
 .search__movie {
-    height: 35vh;
+    height: 45vh;
+    border-top: 1px solid rgba(139, 137, 137, 0.678);
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
 }
 
 .search__news {
-    height: 42vh;
-    width: 48vw;
+    height: 45vh;
+    width: calc(60vw - 25px);
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
+    padding-bottom: 15px;
 }
 
 .search__news__content {
@@ -47,7 +56,9 @@
 
 .search__reviews {
     height: 40vh;
-    width: 48vw;
+    width: calc(60vw - 25px);
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
+    padding-bottom: 15px;
 }
 
 .search__reviews__content {

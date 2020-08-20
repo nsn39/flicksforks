@@ -19,6 +19,20 @@
     background-color: rgb(228, 224, 224);
 }
 
+.news__details h2 {
+    text-decoration: 'none' !important;
+    color: black;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+Link h2 {
+    text-decoration: none;
+}
+
 .news__details p {
     font-size: 12px;
 }

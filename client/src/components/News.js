@@ -14,7 +14,7 @@ function News(props) {
         <div className="news">
             <img src={jsonData.urlToImage}></img>
             <div className="news__details">
-                <Link to={jsonData.url}>
+                <Link className="text-link" to={jsonData.url}>
                     <h2>{jsonData.title}</h2>
                 </Link>
                 <p>{jsonData.author}</p>

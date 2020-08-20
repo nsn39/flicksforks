@@ -5,10 +5,22 @@
     background-color: #d2daf583;
 }
 
+.movies__title {
+    font-size: 18px;
+    padding-left: 25px;
+    margin-top: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #c8d3f583;
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
+}
+
 .movies__detail {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin-top: 10px;
 }
 
 .movies__detail__poster img {
@@ -18,12 +30,10 @@
 
 .movies__detail__poster {
     width: 20vw;
-    background-color: brown;
 }
 
 .movies__detail__facts {
     width: 20vw;
-    background-color: brown;
 }
 
 .movies__detail__facts ul {
@@ -40,12 +50,14 @@
 }
 
 .movies__plot, .movies__extra__info__numbers, .movies__extra__info__rem {
-    background-color: rgb(219, 196, 180);
     border-radius: 10px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #c6bbd1e1;
 }
 
 .movies__plot h4 {

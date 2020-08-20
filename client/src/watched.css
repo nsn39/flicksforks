@@ -8,6 +8,12 @@
 .watched__header {
     font-size: 28px;
     padding-left: 25px;
+    margin-top: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #c8d3f583;
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
 }
 
 .watched__items {
