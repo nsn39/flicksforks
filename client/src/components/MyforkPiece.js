@@ -53,8 +53,10 @@ function MyforkPiece(props) {
         <div className="myforkpiece">
             <Poster jsonData={jsonData} />
             <div className="myforkpiece__option">
-                <Button onClick={deleteFromDB} variant="contained" color="secondary"><Link to="/myforks">UNFORK</Link></Button>
-                <Button onClick={moveToWatch} varaint="contained" color="secondary"><CheckCircleIcon></CheckCircleIcon></Button>
+                <Button onClick={deleteFromDB}  className="click_button" variant="contained">
+                    <p className="myforkpiece__option__unfork">UNFORK</p>
+                </Button>
+                <Button onClick={moveToWatch} className="myforkpiece__option__button" varaint="contained" ><CheckCircleIcon></CheckCircleIcon></Button>
             </div>
         </div>
     )

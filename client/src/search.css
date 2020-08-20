@@ -15,6 +15,14 @@
     align-self: center;
 }
 
+.home__search__button {
+    background-color: rgb(108, 59, 153) !important;
+}
+
+.icon {
+    color: white !important;
+}
+
 .search__results {
     padding-left: 35px;
 }

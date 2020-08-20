@@ -27,7 +27,7 @@ function FavoritesPiece(props) {
         <div className="favoritespiece">
             <Poster jsonData={jsonData} />
             <div className="favoritespiece__option">
-                <Button onClick={deleteFromDB} variant="contained" color="secondary"><FavoriteBorderIcon></FavoriteBorderIcon></Button>
+                <Button onClick={deleteFromDB} className="favorites__option__button" variant="contained"><FavoriteBorderIcon></FavoriteBorderIcon></Button>
             </div>
         </div>
     )

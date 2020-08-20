@@ -37,6 +37,7 @@
     color: white !important;
 }
 
-.icon {
+.material__icon {
     font-size: 29px !important;
+    color: rgb(108, 59, 153) !important;
 }

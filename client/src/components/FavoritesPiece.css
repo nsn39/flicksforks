@@ -3,4 +3,19 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: 2px solid rgb(108, 59, 153);
+    width: 15vw;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #e6e9f383;
+    margin-left: 10px;
+}
+
+.favorites__option__button {
+    color: rgb(108, 59, 153) !important;
+}
+
+.favoritespiece__option {
+    margin-top: 10px;
 }

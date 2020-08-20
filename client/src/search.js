@@ -78,7 +78,7 @@ function Search(props) {
         fetchReviewsAPI();
         // console.log('New jsonMovieData', jsonMovieData);
     }, [ input]);
-    
+
     return (
         <div className="search">
                 <div className="home__search">

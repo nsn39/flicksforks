@@ -10,7 +10,7 @@ export default class Option extends Component {
         return (
             <div className="sidebar__option">
                 <div className="sidebar__option__icon">
-                    <Icon className="icon"/>
+                    <Icon className="material__icon"/>
                 </div>
                 
                 <Link to={this.props.urlEnd} className="sidebar__option__link">
