@@ -4,14 +4,21 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search'
 import './home.css'
+import jsonData from './frontend_json/trending.json';
+import Poster from './components/Poster';
+
 
 function Home() {
     const [input, setInput] = useState("");
 
+    const trendingJSONData = jsonData;
+
     const [redirectSearch, setRedirectSearch] = useState("/movies/:name");
     useEffect(() => {
         console.log(input);
+        console.log(trendingJSONData);
     }, [input]);
+
 
     return (
         <div className="home">
@@ -42,24 +49,14 @@ function Home() {
                 <h4 className="home__trending__header">Trending</h4>
                 
                 <div className="home__trending__list">
-                    <Link to="/movies/inception">Inception</Link>
-                    <Link to="/movies/interstellar">Interstellar</Link>
-                    <Link to="/movies/vendetta">Vendetta</Link>
-                    <Link to="/movies/bicyclethieves">BicycleThieves</Link>
+                    {
+                        trendingJSONData.map((movie) => (
+                            <Poster jsonData={movie} />
+                        ))
+                    }
                 </div>
             </div>
             
-            <div className="home__news">
-
-                <h4 className="home__news__header">News</h4>
-                
-                <div className="home__news__list">
-                    <Link to="/movies/inception">Inception</Link>
-                    <Link to="/movies/interstellar">Interstellar</Link>
-                    <Link to="/movies/vendetta">Vendetta</Link>
-                    <Link to="/movies/bicyclethieves">BicycleThieves</Link>
-                </div>
-            </div>
         </div>
     )
 }

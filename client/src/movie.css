@@ -37,6 +37,18 @@
 }
 
 .movies__detail__facts ul {
+    list-style-type: none;
+}
+
+.movies__detail__facts ul li {
+    margin-bottom: 9px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: rgb(100, 11, 100);
+    font-size: 16px;
+}
+
+.movies__detail__facts ul {
     height: 34vh;
 }
 
@@ -63,4 +75,15 @@
 .movies__plot h4 {
     font-size: large;
     font-style: italic;
+}
+
+.forkButton__text {
+    color: rgb(108, 59, 153);
+    margin-top: -0.3vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}
+
+.forkButton {
+    height: 5vh;
 }

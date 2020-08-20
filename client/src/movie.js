@@ -63,7 +63,9 @@ function Movie(props) {
                         <li>Year: {movieJSONData.Year}</li>
                         <li>Runtime: {movieJSONData.Runtime}</li>
                     </ul>
-                    <Button className="forkButton" onClick={forkMovie} variant="contained" color="secondary">FORK IT!</Button>
+                    <Button className="forkButton" onClick={forkMovie} variant="contained">
+                        <p className="forkButton__text">FORK IT!</p>
+                    </Button>
                 </div>
             </div>
 

@@ -36,11 +36,18 @@
     padding-left: 30px;
 }
 
-.home__trending__header, .home__news__header {
+.home__trending__header{
+    margin-left: 0;
     font-size: 25px;
+    margin-top: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 137, 137, 0.678);
 }
 
 .home__trending__list, .home__news__list {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
