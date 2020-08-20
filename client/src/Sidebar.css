@@ -4,7 +4,8 @@
     width: 20vw;
     height: 90vh;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
     align-items: center;
+    background-color: rgba(238, 237, 237, 0.733);
+    border-right: 1px solid rgba(139, 137, 137, 0.678);
 }
-

@@ -12,12 +12,12 @@
     font-size: 25px;
     font-weight: 900;
     text-decoration: none;
-    color: green;
+    color: rgb(108, 59, 153);
     transition: 0.2s ease-in-out;
 }
 
 .sidebar__option:hover {
-    background-color: rgb(162, 219, 76);
+    background-color: rgb(196, 164, 226);
 }
 
 .sidebar__option:hover .sidebar__option__link{
@@ -30,7 +30,7 @@
     margin-left: 45px;
     margin-right: 15px;
     font-size: 29px !important;
-    color: green !important;
+    color: rgb(108, 59, 153) !important;
 }
 
 .sidebar__option:hover .sidebar__option__icon{

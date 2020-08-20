@@ -1,6 +1,7 @@
 .watched {
-    background-color: indigo;
+    background-color: #d2daf583;
     width: 100%;
+    height: 90vh;
     overflow: auto;
 }
 

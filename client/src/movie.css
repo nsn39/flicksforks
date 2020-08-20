@@ -2,6 +2,7 @@
     height: 90vh;
     overflow: auto;
     width: 100%;
+    background-color: #d2daf583;
 }
 
 .movies__detail {

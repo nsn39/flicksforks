@@ -78,59 +78,57 @@ function Search(props) {
         fetchReviewsAPI();
         // console.log('New jsonMovieData', jsonMovieData);
     }, [ input]);
-
+    
     return (
-        <div>
-            <div className="search">
-                    <div className="home__search">
-                    <TextField 
-                        id="filled-basic"
-                        label="Enter a movie."
-                        variant="outlined"
-                        type="text"
-                        className="home__search__textfield"
-                        onChange={(e) => {
-                            setInput(e.target.value)
-                            setRedirectSearch(`/search/:${e.target.value}`)
-                        }}
-                    />
+        <div className="search">
+                <div className="home__search">
+                <TextField 
+                    id="filled-basic"
+                    label="Enter a movie."
+                    variant="outlined"
+                    type="text"
+                    className="home__search__textfield"
+                    onChange={(e) => {
+                        setInput(e.target.value)
+                        setRedirectSearch(`/search/:${e.target.value}`)
+                    }}
+                />
 
-                    <Button className="home__search__button">
-                        <Link to={redirectSearch} >
-                            <SearchIcon className="icon" />
-                        </Link>
-                    </Button>
+                <Button className="home__search__button">
+                    <Link to={redirectSearch} >
+                        <SearchIcon className="icon" />
+                    </Link>
+                </Button>
 
-                </div>
-                
-                <div className="search__results">
-                    <h4>Showing results for {props.match.params.name}</h4>
-
-                    <div className="search__movie">
-                        <h3 className="title">Movies</h3>
-                        <Poster jsonData={jsonMovieData}/>
-                    </div>
-
-                    <div className="search__news">
-                        <h3 className="title">News</h3>
-                        <div className="search__news__content">
-                            {jsonMovieNews.map((news) => (
-                                <News jsonData={news}/>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="search__reviews">
-                        <h3 className="title">Reviews</h3>
-                        <div className="search__reviews__content">
-                            {jsonMovieReviews.map((review) => (
-                                <Review jsonData={review}/>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                
             </div>
+            
+            <div className="search__results">
+                <h4>Showing results for {props.match.params.name}</h4>
+
+                <div className="search__movie">
+                    <h3 className="title">Movies</h3>
+                    <Poster jsonData={jsonMovieData}/>
+                </div>
+
+                <div className="search__news">
+                    <h3 className="title">News</h3>
+                    <div className="search__news__content">
+                        {jsonMovieNews.map((news) => (
+                            <News jsonData={news}/>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="search__reviews">
+                    <h3 className="title">Reviews</h3>
+                    <div className="search__reviews__content">
+                        {jsonMovieReviews.map((review) => (
+                            <Review jsonData={review}/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            
         </div>
     )
 }
