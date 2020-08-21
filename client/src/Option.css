@@ -1,14 +1,16 @@
 .sidebar__option {
     text-align: center;
     height: 8vh;
-    width: 17vw;
     display: flex;
     align-items: center;
+    width: 17vw;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
 .sidebar__option__link {
+    display: flex;
+    align-items: center;
     font-size: 25px;
     font-weight: 900;
     text-decoration: none;
@@ -40,4 +42,34 @@
 .material__icon {
     font-size: 29px !important;
     color: rgb(108, 59, 153) !important;
+}
+
+/* Media queries */
+@media screen and (max-width : 1200px) {
+    .sidebar__option__link {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width :850px) {
+    .sidebar__option__name {
+        font-size: 0px;
+        display: none;
+    }
+
+    .sidebar__option__link {
+        margin-left: 0 auto;
+    }
+}
+
+@media screen and (max-width :650px) {
+    .sidebar__option__link {
+        margin-left: -1.5vw;
+    }
+}
+
+@media screen and (max-width :550px) {
+    .sidebar__option__link {
+        margin-left: -4.9vw;
+    }
 }
