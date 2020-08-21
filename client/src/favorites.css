@@ -5,6 +5,10 @@
     overflow: auto;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .favorites__header {
     font-size: 28px;
     padding-left: 25px;

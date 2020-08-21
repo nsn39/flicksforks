@@ -7,6 +7,10 @@
     background-color: #d2daf583;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .home__search {
     display: flex;
     height: 30vh;
@@ -48,11 +52,21 @@
 
 .home__trending__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
 }
 
 /* Media queries */
+
+@media screen and (max-width: 950px) {
+    .home__trending__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .home__trending__list {
+        padding-left: 35px;
+    }
+}
 
 @media screen and (max-width: 850px) {
     .home__trending__list {

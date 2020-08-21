@@ -27,6 +27,9 @@
     display: inline-grid;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 /* Media query */
 

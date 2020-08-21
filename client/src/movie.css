@@ -5,6 +5,10 @@
     background-color: #d2daf583;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .movies__title {
     font-size: 18px;
     padding-left: 25px;
