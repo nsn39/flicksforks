@@ -1,6 +1,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 20vw;
     height: 90vh;
     text-align: center;
