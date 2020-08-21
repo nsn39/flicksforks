@@ -73,7 +73,7 @@
 }
 
 .movies__plot h4 {
-    font-size: large;
+    font-size: large; 
     font-style: italic;
 }
 
@@ -86,4 +86,23 @@
 
 .forkButton {
     height: 5vh;
+    width: 100px;
+}
+
+/* Media query */
+@media screen and (max-width: 750px) {
+    .movies__detail {
+        flex-direction: column;
+    }
+
+    .movies__detail__facts {
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .watched__items {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 9vw;
+    }
 }
