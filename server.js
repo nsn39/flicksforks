@@ -15,9 +15,6 @@ app.use(bodyparser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
 
 // ... other app.use middleware 
 app.use(express.static(path.join(__dirname, "client", "build")))
@@ -41,5 +38,5 @@ if (process.env.NODE__ENV === 'production') {
 }
 
 // Listeing to the server
-app.listen(port, () => console.log('App is running on the port'));
+app.listen(port, () => console.log(`App is running on the port ${port}`));
 

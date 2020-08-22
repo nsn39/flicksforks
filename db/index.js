@@ -8,4 +8,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://dmwnishan:tendamagic@
 
 mongoose.pluralize(null);
 const db = mongoose.connection;
+mongoose.connection.on('connected', () => {
+    console.log('MongoDB is alright!');
+})
 module.exports = db;
