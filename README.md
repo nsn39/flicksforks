@@ -17,7 +17,8 @@
     - You can also pin some of your fav movies in favorites section.
     
 ### Mern Stack    
-![Mern stack](https://dotnettrickscloud.blob.core.windows.net/uploads/CourseImages/becomeamernstackdeveloper-mobile.png)
+![139b757e13](https://user-images.githubusercontent.com/34716481/90961051-d4512780-e4c5-11ea-9499-931669cf8ced.png)
+
 
 ### Frontend Dependencies: 
 ```bash
